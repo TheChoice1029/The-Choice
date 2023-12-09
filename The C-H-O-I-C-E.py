@@ -58,7 +58,7 @@ type(81)
 print('')#This is for a new line
 sleep(0.5)
 phrase = 'There is one thing you need to keep an eye on throuought the game: '
-new_varnew_var = type(67)
+type(67)
 
 print('')
 phrase = '''Stamina.
