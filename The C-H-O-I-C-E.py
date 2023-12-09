@@ -1,6 +1,7 @@
 from time import *
 from random import randint
 invent = []
+choice = 0
 def type(phrase, char):
     a = 0
     for i in range (char):
@@ -58,7 +59,7 @@ sleep(0.5)
 type('There is one thing you need to keep an eye on throuought the game: ', 67)
 print('')
 type('''Stamina.
-    Stamina represents how your character's feeling and how motivated they are. Stamina is represented in percentage ('%') - 100% is high stamina, 0% is no stamina. Stamina can go above 100%. Your character start out with 100% stamina at the start of each game. The less stamina they have, the less energy there going to have to do things with. Each choice you make will cost some stamina, so be wise but don't sacrifice too much. There will always be a task with low stamina needs if stamina is low. ''', 508)
+    Stamina represents how your character's feeling and how motivated they are. Stamina is represented in percentage ('%') - 100% is high stamina, 0% is no stamina. Stamina can go above 100%. Your character starts out with 100% stamina at the start of each game. The less stamina they have, the less energy there going to have to do things with. Each choice you make will cost some stamina, so be wise but don't sacrifice too much. There will always be a task with low stamina needs if stamina is low. ''', 510)
 sleep(0.5)
 print('')
 print('-----')
@@ -80,6 +81,13 @@ location = input(' ')
 location = location.upper()
 if location == '1':
     print('----------------------------------------------------')
+    choice =+ 1
     print('WELCOME TO')
     type('The Mountains', 13)
+    invent.clear()
+    invent.append('Spyglass')
+    invent.append('Map')
+    invent.append('Water')
+    for i in range (3):
+        invent.append('Apple')
     type('There is a vast mountain.', )#INSERT CHAR NO.
