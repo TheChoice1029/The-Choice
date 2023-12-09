@@ -91,6 +91,7 @@ location = input(' ')
 location = location.upper()
 #[*_THIS IS WHERE THE RPG STARTS_*]
 if location == '1':
+    choices =+ 1
     print('----------------------------------------------------')
     sleep(0.5)
     print('WELCOME TO')
@@ -102,6 +103,7 @@ if location == '1':
     phrase='In front of you there is a mountain. But not just any mountain, this mountain is HUGE. Your task is to climb up it. You are equipped with a map, a spyglass, a compass, some water, some food and a sleeping bag.'
     type(209)
 elif location == '2':
+    choices =+ 1
     print('----------------------------------------------------')
     sleep(0.5)
     print('WELCOME TO')
@@ -132,6 +134,7 @@ elif location == '2':
     sleep(0.1)
     location = input(' ')
     if location == '1':
+        choices =+ 1
         phrase = 'You chose the narrow and dark path. '
         type(36)
         sleep(0.5)
@@ -168,106 +171,114 @@ elif location == '2':
         sleep(0.1)
         location = input(' ')
         if location == '1':
+            choices =+ 1
             #Code for ran away
             print('Location = 1')
         elif location == '2':
+            choices =+ 1
             print('Location = 2')
     elif location == '2':
-            phrase = 'You chose the wide path. It seems welcoming. '
-            type(45)
+        choices =+ 1    
+        phrase = 'You chose the wide path. It seems welcoming. '
+        type(45)
+        sleep(0.5)
+        phrase = 'A bug scuttles across the path. '
+        type(32)
+        sleep(0.5)
+        phrase = 'You continue walking. '
+        type(22)
+        sleep(0.5)
+        phrase = 'Another bug crosses your path. Closer to you this time. '
+        type(56)
+        sleep(0.5)
+        phrase = 'This time, about 5 start to wander across the path. '
+        type(52)
+        print('')
+        print('-----')
+        phrase = 'Do you: '
+        type(8)
+        print('')
+        phrase = '1. Try to kill the bugs as they go past. [-10%]'
+        type(47)
+        print('')
+        sleep(0.5)
+        phrase = '2. Ignore the bugs. [-1%]'
+        type(26)
+        print('')
+        sleep(0.5)
+        phrase = '3. Walk faster, and try to get away. [-5%]'
+        type(43)
+        sleep(0.5)
+        print('')
+        print('-----')
+        location = input('')
+        if location == '1':
+            choices =+ 1
+            stamina = stamina-10
+            print('STAMINA =', stamina)
             sleep(0.5)
-            phrase = 'A bug scuttles across the path. '
-            type(32)
+            phrase = 'You have fun trying to squash the bugs, it makes you feel happy.'
+            type(64)
+            print('')
+            print('[STAMINA +10%]')
+            stamina == stamina + 10
             sleep(0.5)
-            phrase = 'You continue walking. '
-            type(22)
+            phrase = 'But soon floods of bugs are overcrowding the path. '
+            type(51)
             sleep(0.5)
-            phrase = 'Another bug crosses your path. Closer to you this time. '
-            type(56)
+            phrase = 'You try to step away from the giant sea but you lose your balance as the bugs push and pull at your feet. '
+            type(106)
+            sleep(1)
+            phrase = 'You fall into the layer of bugs. '
+            type(33)
             sleep(0.5)
-            phrase = 'This time, about 5 start to wander across the path. '
-            type(52)
+            phrase = 'They crawl across every inch of your body, finding there way through the maze of cloth. '
+            type(88)
+            sleep(0.5)
             print('')
             print('-----')
-            phrase = 'Do you: '
-            type(8)
-            print('')
-            phrase = '1. Try to kill the bugs as they go past. [-10%]'
-            type(47)
-            print('')
+            phrase = 'What do you do: '
+            type(16)
             sleep(0.5)
-            phrase = '2. Ignore the bugs. [-1%]'
-            type(26)
-            print('')
+            phrase = '1. Try to wriggle free of the bugs grasp. '
+            type(42)
+            phrase = '2. Accept your fate. '
+            type(21)
+            phrase = '3. Try to find something to help you in your pockets. '
+            type(54)
             sleep(0.5)
-            phrase = '3. Walk faster, and try to get away. [-5%]'
+            print('')
+            print('-----')
+            if location == '2':
+                choices =+ 1
+                phrase = 'You accept your fate to the bugs.'
+        elif location == '2':
+            choices =+ 1
+            stamina = stamina-1
+            print('STAMINA=', stamina)
+            sleep(0.5)
+            phrase = 'You ignore the bugs and carry on walking. '
+            sleep(0.5)
+            phrase = 'You hear many more bugs scuttle behind you. '
+            type(44)
+            sleep(0.5)
+            phrase = 'The scuttling increases further, like static following behind you. '
+            type(67)
+            sleep(0.5)
+            phrase = 'You pick up the pace, slightly disturbed by the amount of scuttling going on out of your vision. '
+            type(97)
+            sleep(0.5)
+            phrase = 'You speed up into a brisk jog, then a run. '
             type(43)
             sleep(0.5)
+            phrase = 'It sounds like the bugs are getting closer - it feels like it. '
+            type(63)
+        else:
             print('')
-            print('-----')
-            location = input('')
-            if location == '1':
-                stamina = stamina-10
-                print('STAMINA =', stamina)
-                sleep(0.5)
-                phrase = 'You have fun trying to squash the bugs, it makes you feel happy.'
-                type(64)
-                print('')
-                print('[STAMINA +10%]')
-                stamina == stamina + 10
-                sleep(0.5)
-                phrase = 'But soon floods of bugs are overcrowding the path. '
-                type(51)
-                sleep(0.5)
-                phrase = 'You try to step away from the giant sea but you lose your balance as the bugs push and pull at your feet. '
-                type(106)
-                sleep(1)
-                phrase = 'You fall into the layer of bugs. '
-                type(33)
-                sleep(0.5)
-                phrase = 'They crawl across every inch of your body, finding there way through the maze of cloth. '
-                type(88)
-                sleep(0.5)
-                print('')
-                print('-----')
-                phrase = 'What do you do: '
-                type(16)
-                sleep(0.5)
-                phrase = '1. Try to wriggle free of the bugs grasp. '
-                type(42)
-                phrase = '2. Accept your fate. '
-                type(21)
-                phrase = '3. Try to find something to help you in your pockets. '
-                type(54)
-                sleep(0.5)
-                print('')
-                print('-----')
-            elif location == '2':
-                stamina = stamina-1
-                print('STAMINA=', stamina)
-                sleep(0.5)
-                phrase = 'You ignore the bugs and carry on walking. '
-                type(42)
-                sleep(0.5)
-                phrase = 'You hear many more bugs scuttle behind you. '
-                type(44)
-                sleep(0.5)
-                phrase = 'The scuttling increases further, like static following behind you. '
-                type(67)
-                sleep(0.5)
-                phrase = 'You pick up the pace, slightly disturbed by the amount of scuttling going on out of your vision. '
-                type(97)
-                sleep(0.5)
-                phrase = 'You speed up into a brisk jog, then a run. '
-                type(43)
-                sleep(0.5)
-                phrase = 'It sounds like the bugs are getting closer - it feels like it. '
-                type(63)
-            else:
-               print('')
-               print('Unknown input. Aborting.')
-               exit
+            print('Unknown input. Aborting.')
+            exit
     elif location == '2':
+        choices =+ 1
         stamina = stamina-5
         print('STAMINA=', stamina)
         sleep(0.5)
@@ -278,6 +289,7 @@ elif location == '2':
         print('Unknown input. Aborting.')
         exit
 elif location == '3':
+    choices =+ 1
     print('----------------------------------------------------')
     sleep(0.5)
     print('WELCOME TO')
