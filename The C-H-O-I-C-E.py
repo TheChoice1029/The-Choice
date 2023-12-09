@@ -56,10 +56,10 @@ sleep(0.5)
 type('Your first choice is approaching, but first there is something you need to know. ', 81)
 print('')#This is for a new line
 sleep(0.5)
-type('There is one thing you need to keep an eye on throuought the game: ', 67)
+type('There is one thing you need to keep an eye on throughout the game: ', 67)
 print('')
 type('''Stamina.
-    Stamina represents how your character's feeling and how motivated they are. Stamina is represented in percentage ('%') - 100% is high stamina, 0% is no stamina. Stamina can go above 100%. Your character starts out with 100% stamina at the start of each game. The less stamina they have, the less energy there going to have to do things with. Each choice you make will cost some stamina, so be wise but don't sacrifice too much. There will always be a task with low stamina needs if stamina is low. ''', 510)
+    Stamina represents how you are feeling and how motivated you are. Stamina is represented in percentage ('%') - 100% is high stamina, 0% is no stamina. If stamina hits 0%, then the you die. Stamina can go above 100%. You start out with 100% stamina at the start of each game. The less stamina they have, the less energy there going to have to do things with. Each choice you make will cost some stamina, so be wise but don't sacrifice too much. There will always be a task with low stamina needs if stamina is low. ''', 525)
 sleep(0.5)
 print('')
 print('-----')
