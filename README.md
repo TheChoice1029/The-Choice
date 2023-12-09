@@ -1,4 +1,4 @@
-Just a python fRPG im working on :)
+Just a python RPG im working on :)
 
 
 
