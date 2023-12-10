@@ -8,9 +8,9 @@ def type(phrase):
         print(phrase[a], end='', flush=True)
         c = phrase[a]
         if c == '.':
-            sleep(0.5)
+            sleep(0.2)
         elif c == ',':
-            sleep(0.25)
+            sleep(0.1)
         else:
             sleep(0.05)
         a+=1
