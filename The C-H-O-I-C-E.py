@@ -8,9 +8,9 @@ def type(phrase):
         print(phrase[a], end='', flush=True)
         c = phrase[a]
         if c == '.':
-            sleep(0.2)
+            sleep(0.5)
         elif c == ',':
-            sleep(0.1)
+            sleep(0.25)
         else:
             sleep(0.05)
         a+=1
@@ -20,9 +20,9 @@ def speak(phrase, char):
         print(phrase[a], end='', flush=True)
         c = phrase[a]
         if c == '.':
-            sleep(0.2)
+            sleep(0.5)
         elif c == ',':
-            sleep(0.1)
+            sleep(0.25)
         else:
             sleep(0.07)
         a+=1
