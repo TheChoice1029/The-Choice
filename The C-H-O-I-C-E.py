@@ -2,17 +2,14 @@ from time import *
 from random import randint
 invent = []
 choice = 0
+stamina = 100
 def type(phrase):
     a = 0
     for i in range (len(phrase)):
         print(phrase[a], end='', flush=True)
         c = phrase[a]
-        if c == '.':
+        if c == '.' or c=='!' or c=='?':
             sleep(0.5)
-        elif c == '!':
-        	sleep(0.5)
-        elif c == '?':
-        	sleep(0.5)
         elif c == ',':
             sleep(0.25)
         else:
@@ -23,30 +20,22 @@ def speak(phrase):
     for i in range (len(phrase)):
         print(phrase[a], end='', flush=True)
         c = phrase[a]
-        if c == '.':
+        if c == '.' or c=='!' or c=='?':
             sleep(0.5)
-        elif c == '!':
-        	sleep(0.5)
-        elif c == '?':
-        	sleep(0.5)
         elif c == ',':
             sleep(0.25)
         else:
-            sleep(0.05)
+            sleep(0.07)
         a+=1
 def fasttype(phrase):
     a = 0
     for i in range (len(phrase)):
         print(phrase[a], end='', flush=True)
         c = phrase[a]
-        if c == '.':
+        if c == '.' or c=='!' or c=='?':
             sleep(0.25)
-        elif c == '!':
-        	sleep(0.25)
-        elif c == '?':
-        	sleep(0.25)
         elif c == ',':
-            sleep(0.025)
+            sleep(0.125)
         else:
             sleep(0.01)
         a+=1
@@ -138,6 +127,7 @@ if location == '1':
     type('You have a bag on your back. You can feel that some stuff is in there. You are curious to find out what is in there. ')
     print('')
     type('So... before we continue your journey, do you want to look in that bag?')
+    print('')
     print('-----')
     type('1. Yes [-5%]')
     print('')
@@ -145,11 +135,66 @@ if location == '1':
     print('')
     type('Please type 1, 2, or 3, correspondent to the option you want:')
     location = input(' ')
-    location=location.upper
     if location == '1':
-    	choices=+1
-    	print('')
-    	type('You open your bag to reveal yet another vital game mechanic...')
-    	fasttype('''---------
-    	INVENT''')
-	    
+        choice=+1
+        stamina=-5
+        print('')
+        type('You opened your bag to find a vital game mechanic that I forgot to mention earlier... (oops).')
+        print('')
+        type('''-----
+INVENT: ''')
+        print(invent)
+        type('So thats is your inventory! ')
+        type('Do you want to eat an apple?')
+        print('')
+        print('-----')
+        type('1. Yes [-5%]')
+        print('')
+        type('2. No [-0%]')
+        print('')
+        type('Please type 1, 2, or 3, correspondent to the option you want:')
+        location = input(' ')
+        if location == '1':
+            print('')
+            type('You ate an apple! (So skilled). +20 Stamina.')
+            invent.remove('Apple')
+            stamina=+20
+            type('Do you want to eat an apple?')
+            print('')
+            print('-----')
+            type('1. Yes [-5%]')
+            print('')
+            type('2. No [-0%]')
+            print('')
+            type('Please type 1, 2, or 3, correspondent to the option you want:')
+            location = input(' ')
+            if location == '1':
+                print('')
+                type('You ate an apple! (So skilled). +20 Stamina.')
+                invent.remove('Apple')
+                stamina=+20
+                type('Do you want to eat your last apple?')
+                print('')
+                print('-----')
+                type('1. Yes [-5%]')
+                print('')
+                type('2. No [-0%]')
+                print('')
+                type('Please type 1, 2, or 3, correspondent to the option you want:')
+                location = input(' ')
+                if location == '1':
+                    print('')
+                    type('You ate an apple! (So skilled). +20 Stamina.')
+                    invent.remove('Apple')
+                    stamina=+20
+            type('Current stamina level:')
+            print(stamina)
+    type('Okay, let\'s continue this journey!')
+    print('')
+    type('Your mission is to get to the peak of the mountain')
+    print('')
+    type('There are multiple ways of doing so:')
+    print('')
+    type('''-----
+1. Through the caves [-0%]
+2. Up the side [-0%]''')
