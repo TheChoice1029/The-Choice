@@ -14,9 +14,9 @@ def type(phrase):
         else:
             sleep(0.05)
         a+=1
-def speak(phrase, char):
+def speak(phrase):
     a = 0
-    for i in range (char):
+    for i in range (len(phrase)):
         print(phrase[a], end='', flush=True)
         c = phrase[a]
         if c == '.':
@@ -71,7 +71,7 @@ sleep(0.5)
 type('There is one thing you need to keep an eye on throughout the game:')
 print('')
 type('''Stamina.
-    Stamina represents how you are feeling and how motivated you are. Stamina is represented in percentage ('%') - 100% is high stamina, 0% is no stamina. If stamina hits 0%, then the you die. Stamina can go above 100%. You start out with 100% stamina at the start of each game. The less stamina they have, the less energy there going to have to do things with. Each choice you make will cost some stamina, so be wise but don't sacrifice too much. There will always be a task with low stamina needs if stamina is low. ''')
+    Stamina represents how you are feeling and how motivated you are. Stamina is represented in percentage ('%') - 100% is high stamina, 0% is no stamina. If stamina hits 0%, then the you die. Stamina can go above 100%. You start out with 100% stamina at the start of each game. The less stamina you have, the less energy you are going to have to do things with. Each choice you make will cost some stamina, so be wise but don't sacrifice too much. There will always be a task with low stamina needs if stamina is low. ''')
 sleep(0.5)
 print('')
 print('-----')
@@ -103,4 +103,8 @@ if location == '1':
     invent.append('Water')
     for i in range (3):
         invent.append('Apple')
-    type('There is a vast mountain.')
+    type('A vast mound of rock overshadows you - a mountain. Snow lays peacefully on it\'s top. Caves intertwine their way through the alp like hair in a hairbrush.')
+    type('You don\'t remember much. You don\'t remember how you got here. You don\'t remember why you are here. You even don\'t remember if you had a family. If you had freinds, relatives. But you must have. I mean, who put you into this world if you didn\'t have a mother, right?')
+    type('You see some moving silhouettes... People? They look like tiny ants from here. I wonder if you could make freinds with them, that\'s if they are people - of course.')
+    type('You see a cave entrance, dar
+         #finish the string and add option to look in bag
