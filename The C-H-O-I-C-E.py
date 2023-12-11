@@ -106,5 +106,7 @@ if location == '1':
     type('A vast mound of rock overshadows you - a mountain. Snow lays peacefully on it\'s top. Caves intertwine their way through the alp like hair in a hairbrush.')
     type('You don\'t remember much. You don\'t remember how you got here. You don\'t remember why you are here. You even don\'t remember if you had a family. If you had freinds, relatives. But you must have. I mean, who put you into this world if you didn\'t have a mother, right?')
     type('You see some moving silhouettes... People? They look like tiny ants from here. I wonder if you could make freinds with them, that\'s if they are people - of course.')
-    type('You see a cave entrance, dar
-         #finish the string and add option to look in bag
+    type('You see a cave entrance. It\'s pitch black. It\'s like light is scared to go near there.')
+    type('You have a bag on your back. You can feel that some stuff is in there. You are curious to find out what is in there.')
+    type('So... OPTION TIME!! (yay). So you have a few general options that you can do.
+         #option to look in bag
