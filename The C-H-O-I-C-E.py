@@ -9,6 +9,10 @@ def type(phrase):
         c = phrase[a]
         if c == '.':
             sleep(0.5)
+        elif c == '!':
+        	sleep(0.5)
+        elif c == '?':
+        	sleep(0.5)
         elif c == ',':
             sleep(0.25)
         else:
@@ -21,10 +25,30 @@ def speak(phrase):
         c = phrase[a]
         if c == '.':
             sleep(0.5)
+        elif c == '!':
+        	sleep(0.5)
+        elif c == '?':
+        	sleep(0.5)
         elif c == ',':
             sleep(0.25)
         else:
-            sleep(0.07)
+            sleep(0.05)
+        a+=1
+def fasttype(phrase):
+    a = 0
+    for i in range (len(phrase)):
+        print(phrase[a], end='', flush=True)
+        c = phrase[a]
+        if c == '.':
+            sleep(0.25)
+        elif c == '!':
+        	sleep(0.25)
+        elif c == '?':
+        	sleep(0.25)
+        elif c == ',':
+            sleep(0.025)
+        else:
+            sleep(0.01)
         a+=1
 print('BOOTING', end='')
 phrase = '.'
@@ -87,11 +111,12 @@ print('')
 type('3. The Beach [-0%]')
 sleep(0.5)
 print('')
-type('Please type 1, 2 or 3 correspondent to the options.')
+type('Please type 1, 2, or 3, correspondent to the option you want:')
 sleep(0.5)
 location = input(' ')
 location = location.upper()
 if location == '1':
+    choice+=1
     print('----------------------------------------------------')
     choice =+ 1
     print('WELCOME TO')
@@ -104,9 +129,27 @@ if location == '1':
     for i in range (3):
         invent.append('Apple')
     type('A vast mound of rock overshadows you - a mountain. Snow lays peacefully on it\'s top. Caves intertwine their way through the alp like hair in a hairbrush. ')
-    type('You don\'t remember much. You don\'t remember how you got here. You don\'t remember why you are here. You even don\'t remember if you had a family. If you had freinds, relatives. But you must have. I mean, who put you into this world if you didn\'t have a mother, right? ')
-    type('You see some moving silhouettes... People? They look like tiny ants from here. I wonder if you could make freinds with them, that\'s if they are people - of course. ')
+    print('')
+    type('You don\'t remember much. You don\'t remember how you got here. You don\'t remember why you are here. You even don\'t remember if you had a family. If you had friends, relatives. But you must have. I mean, who put you into this world if you didn\'t have a mother, right? ')
+    print('')
+    type('You see some moving silhouettes... People? They look like tiny ants from here. I wonder if you could make friends with them, that\'s if they are people - of course. ')
+    print('')
     type('You see a cave entrance. It\'s pitch black. It\'s like light is scared to go near there. ')
     type('You have a bag on your back. You can feel that some stuff is in there. You are curious to find out what is in there. ')
-    type('So... OPTION TIME!! (yay). So you have a few general options that you can do...')
-         #option to look in bag
+    print('')
+    type('So... before we continue your journey, do you want to look in that bag?')
+    print('-----')
+    type('1. Yes [-5%]')
+    print('')
+    type('2. No [-0%]')
+    print('')
+    type('Please type 1, 2, or 3, correspondent to the option you want:')
+    location = input(' ')
+    location=location.upper
+    if location == '1':
+    	choices=+1
+    	print('')
+    	type('You open your bag to reveal yet another vital game mechanic...')
+    	fasttype('''---------
+    	INVENT''')
+	    
