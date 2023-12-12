@@ -39,6 +39,18 @@ def fasttype(phrase):
         else:
             sleep(0.01)
         a+=1
+def superfasttype(phrase):
+    a = 0
+    for i in range (len(phrase)):
+        print(phrase[a], end='', flush=True)
+        c = phrase[a]
+        if c == '.' or c=='!' or c=='?':
+            sleep(0.025)
+        elif c == ',':
+            sleep(0.0125)
+        else:
+            sleep(0.001)
+        a+=1
 print('BOOTING', end='')
 phrase = '.'
 for i in range (11):
@@ -72,7 +84,17 @@ print(']')
 print('DONE')
 print('----------------------------------------------------')
 sleep(0.5)
-type('Welcome to the C-H-O-I-C-E')
+type('Welcome to...')
+superfasttype('''
+ #######                   #####  #     # ####### ###  #####  ####### 
+    #    #    # ######    #     # #     # #     #  #  #     # #       
+    #    #    # #         #       #     # #     #  #  #       #       
+    #    ###### #####     #       ####### #     #  #  #       #####   
+    #    #    # #         #       #     # #     #  #  #       #       
+    #    #    # #         #     # #     # #     #  #  #     # #       
+    #    #    # ######     #####  #     # ####### ###  #####  ####### 
+                                                                      
+''')
 sleep(0.5)
 print('')
 type('A text-based RPG where YOU decide what happens. ')
@@ -105,9 +127,8 @@ sleep(0.5)
 location = input(' ')
 location = location.upper()
 if location == '1':
-    choice+=1
     print('----------------------------------------------------')
-    choice =+ 1
+    choice =choice+1
     print('WELCOME TO')
     type('The Mountains')
     print('')
@@ -133,10 +154,10 @@ if location == '1':
     print('')
     type('2. No [-0%]')
     print('')
-    type('Please type 1, 2, or 3, correspondent to the option you want:')
+    type('Please type 1, or 2, correspondent to the option you want:')
     location = input(' ')
     if location == '1':
-        choice=+1
+        choice=choice+1
         stamina=-5
         print('')
         type('You opened your bag to find a vital game mechanic that I forgot to mention earlier... (oops).')
@@ -152,13 +173,14 @@ INVENT: ''')
         print('')
         type('2. No [-0%]')
         print('')
-        type('Please type 1, 2, or 3, correspondent to the option you want:')
+        type('Please type 1, or 2, correspondent to the option you want:')
         location = input(' ')
         if location == '1':
             print('')
             type('You ate an apple! (So skilled). +20 Stamina.')
+            print('')
             invent.remove('Apple')
-            stamina=+20
+            stamina=stamina+20
             type('Do you want to eat an apple?')
             print('')
             print('-----')
@@ -166,13 +188,14 @@ INVENT: ''')
             print('')
             type('2. No [-0%]')
             print('')
-            type('Please type 1, 2, or 3, correspondent to the option you want:')
+            type('Please type 1, or 2, correspondent to the option you want:')
             location = input(' ')
             if location == '1':
                 print('')
                 type('You ate an apple! (So skilled). +20 Stamina.')
+                print('')
                 invent.remove('Apple')
-                stamina=+20
+                stamina= stamina+20
                 type('Do you want to eat your last apple?')
                 print('')
                 print('-----')
@@ -180,13 +203,15 @@ INVENT: ''')
                 print('')
                 type('2. No [-0%]')
                 print('')
-                type('Please type 1, 2, or 3, correspondent to the option you want:')
+                type('Please type 1, or 2, correspondent to the option you want:')
                 location = input(' ')
                 if location == '1':
                     print('')
+                    stamina-=5
                     type('You ate an apple! (So skilled). +20 Stamina.')
+                    print('')
                     invent.remove('Apple')
-                    stamina=+20
+                    stamina= stamina + 20
             type('Current stamina level:')
             print(stamina)
     type('Okay, let\'s continue this journey!')
