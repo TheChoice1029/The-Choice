@@ -140,7 +140,7 @@ if location == '1':
         invent.append('Apple')
     type('A vast mound of rock overshadows you - a mountain. Snow lays peacefully on it\'s top. Caves intertwine their way through the alp like hair in a hairbrush. ')
     print('')
-    type('You don\'t remember much. You don\'t remember how you got here. You don\'t remember why you are here. You even don\'t remember if you had a family. If you had friends, relatives. But you must have. I mean, who put you into this world if you didn\'t have a mother, right? ')
+    type('You don\'t remember much. You don\'t remember how you got here. You don\'t remember why you are here. You don\'t even remember if you had a family. If you had friends, relatives. But you must have. I mean, who put you into this world if you didn\'t have a mother, right? ')
     print('')
     type('You see some moving silhouettes... People? They look like tiny ants from here. I wonder if you could make friends with them, that\'s if they are people - of course. ')
     print('')
